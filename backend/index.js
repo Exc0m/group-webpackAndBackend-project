@@ -8,7 +8,7 @@ app.use(express.json());
 
 mongoose
 .connect(
-  "mongodb+srv://Ali:Remark@cluster0.qfxel.mongodb.net/NewBase?retryWrites=true&w=majority"
+  "mongodb+srv://exc0m:Salewa119@cluster0.esshs.mongodb.net/groupNewsProject?retryWrites=true&w=majority"
 )
 .then(() => {
   console.log("успешное подключение к MongoDB");
