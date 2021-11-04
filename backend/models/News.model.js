@@ -6,7 +6,11 @@ const newsSchema = mongoose.Schema({
   category: {
     type: mongoose.SchemaTypes.ObjectId,
     ref: "Category"
-  }
+  },
+  comments: {
+    type: mongoose.SchemaTypes.ObjectId,
+    ref: "Comments"
+  },
 })
 
 const News = mongoose.model('News', newsSchema);

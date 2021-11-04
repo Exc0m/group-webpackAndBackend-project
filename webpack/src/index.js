@@ -1,15 +1,12 @@
-import img from "../assets/logo"
 import "./style.css"
 
-const root = document.querySelector("#root");
+import getNews from './getNews'
+import getCategories from "./getCategories";
+import getComments from "./getComments";
+import state from "./state"
 
-const logo = document.createElement("img");
-logo.src = img
+getCategories()
+getComments()
+getNews()
 
-const hello = (name) => `Hello ${name}!`
-const h1 = document.createElement("h1")
-h1.textContent = hello("Intocode")
-root.prepend(h1)
-
-root.append(logo)
-
+console.log(state)

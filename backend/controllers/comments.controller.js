@@ -5,8 +5,8 @@ module.exports.commentsController = {
     try {
       await Comment.create({
         author: req.body.author,
-        text: req.body.text,
-        news: req.params.id,
+        comment: req.body.comment,
+        news: req.body.news,
       });
       res.json("коммент добавлен");
     } catch (e) {
@@ -23,10 +23,9 @@ module.exports.commentsController = {
   },
   getCommentsId: async (req, res) => {
     try {
-      const commentsId = await Comment.find({ news: req.params.id })
-      .populate("news")
+      const comments = await Comment.find()
       .lean();
-      res.json(commentsId);
+      res.json(comments);
     } catch (e) {
       res.json("error");
     }
