@@ -3,6 +3,8 @@ import state from "./state"
 const renderCategories = () => {
     const ul = document.createElement("ul")
     const root = document.querySelector("#root")
+
+    ul.classList.add("nav")
     state.categories.forEach((post) => {
         const li = document.createElement("li")
         const h3 = document.createElement("h3")

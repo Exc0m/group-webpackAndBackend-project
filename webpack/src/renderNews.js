@@ -3,6 +3,7 @@ import state from "./state"
 // console.log("222", state)
 const renderNews = () => {
     const ul = document.createElement("ul")
+    ul.classList.add("news")
     const root = document.querySelector("#root")
     const comments = state.comments
     state.news.forEach((post) => {
